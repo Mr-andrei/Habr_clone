@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
+        run: npm install
       - name: build production project
         run: npm run build:prod
         if: always()
@@ -25,7 +26,6 @@ jobs:
         run: npm run lint:ts
         if: always()
       - name: linting css
-        if: always()
         run: npm run lint:scss
       - name: unit testing
         if: always()
