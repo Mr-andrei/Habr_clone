@@ -10,5 +10,7 @@
   "throw error": "throw error",
   "short": "short",
   "increment": "increment",
-  "Короткий язык": "Ru"
+  "Короткий язык": "Ru",
+  "Login": "Логин",
+  "Password": "Пароль"
 }
