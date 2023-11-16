@@ -1,6 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { LoginForm } from 'features/AuthByUserName/ui/LoginForm/LoginForm';
+import {
+    StoreDecorator,
+} from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
     title: 'features/LoginForm',
@@ -14,3 +17,9 @@ const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args
 
 export const Default = Template.bind({});
 Default.args = {};
+Default.decorators = [StoreDecorator({
+    loginForm: {
+        userName: '123',
+        password: 'asd',
+    },
+})];
