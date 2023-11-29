@@ -23,7 +23,7 @@ export const Light = Template.bind({});
 Light.args = {};
 Light.decorators = [StoreDecorator({
     loginForm: {
-        userName: '123',
+        username: '123',
         password: '342',
     },
 })];
@@ -33,7 +33,7 @@ OutlineDark.args = {};
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 OutlineDark.decorators = [StoreDecorator({
     loginForm: {
-        userName: '123',
+        username: '123',
         password: '342',
     },
 })];

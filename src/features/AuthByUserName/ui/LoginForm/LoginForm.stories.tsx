@@ -19,7 +19,7 @@ export const Default = Template.bind({});
 Default.args = {};
 Default.decorators = [StoreDecorator({
     loginForm: {
-        userName: '123',
+        username: '123',
         password: 'asd',
     },
 })];
