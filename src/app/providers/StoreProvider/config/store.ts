@@ -27,3 +27,5 @@ createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersMapObject<S
 
     return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']
