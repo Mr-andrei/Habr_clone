@@ -25,7 +25,7 @@ import {
 } from '../../model/selectors/getLoginError/getLoginError';
 import {
     loginByUserName,
-} from '../../model/servious/loginByUserName/LoginByUserName';
+} from '../../model/services/loginByUserName/LoginByUserName';
 import { loginActions, loginReducer } from '../../model/slice/LoginSlice';
 import cls from './LoginForm.module.scss';
 
