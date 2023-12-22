@@ -1,4 +1,4 @@
-export { Profile, ProfileSchema } from './model/types/profile';
+export { Profile, ProfileSchema } from './model/types/Profile';
 export { profileActions, profileReducer } from './model/slice/profileSlice';
 
 export {
@@ -19,3 +19,4 @@ export { getProfileData } from './model/selectors/getProfileData/getProfileData'
 export { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getProfileIsLoading';
 export { getProfileReadOnly } from './model/selectors/getProfileReadOnly/getProfileReadOnly';
 export { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
+export { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
