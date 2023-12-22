@@ -3,7 +3,8 @@ import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUserName';
 import {
     AnyAction,
-    CombinedState, Dispatch, EnhancedStore,
+    CombinedState,
+    EnhancedStore,
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
@@ -40,5 +41,5 @@ export interface ThunkExtraArg {
 export interface ThunkConfig<T>{
     rejectValue: T;
     extra: ThunkExtraArg;
-    dispatch?: Dispatch
+    state: StateSchema;
 }

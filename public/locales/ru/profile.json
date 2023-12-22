@@ -2,5 +2,11 @@
   "Profile": "Профиль",
   "Change": "Редактировать",
   "Yor name": "Yor name",
-  "Yor last name": "Yor last name"
+  "Yor last name": "Yor last name",
+  "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
+  "Попробуйте обновить страницу": "Попробуйте обновить страницу",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Age": "Age",
+  "City": "City"
 }
