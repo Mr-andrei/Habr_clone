@@ -1,8 +1,10 @@
 {
   "Age": "Age",
+  "Avatar": "Avatar",
   "Cancel": "Cancel",
   "Change": "Change",
   "City": "City",
+  "Currency": "Currency",
   "Login": "Login",
   "None": "none",
   "Password": "Password",
@@ -13,6 +15,7 @@
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "throw error",
+  "username": "username",
   "Войти": "Login",
   "Выйти": "Выйти",
   "Главная": "Main",
@@ -25,5 +28,6 @@
   "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
   "Страница не найдена": "Страница не найдена",
   "Тогл": "",
+  "Укажите страну": "Укажите страну",
   "Язык": "Язык"
 }

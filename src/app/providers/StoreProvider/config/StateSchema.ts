@@ -1,4 +1,3 @@
-import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUserName';
 import {
@@ -14,7 +13,6 @@ import { To } from 'react-router-dom';
 import { NavigateOptions } from 'react-router';
 
 export interface StateSchema {
-    counter: CounterSchema;
     user: UserSchema;
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
