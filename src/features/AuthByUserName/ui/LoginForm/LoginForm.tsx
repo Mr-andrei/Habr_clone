@@ -7,7 +7,7 @@ import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import {
     DynamicModuleLoader,
-    ReducerList,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -34,7 +34,7 @@ interface LoginFormProps {
     onSuccess: () => void;
 }
 
-const initialReducers: ReducerList = { loginForm: loginReducer };
+const initialReducers: ReducersList = { loginForm: loginReducer };
 
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation();
