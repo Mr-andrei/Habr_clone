@@ -13,5 +13,7 @@
   "Login": "Login",
   "Password": "Password",
   "Выйти": "Logout",
-  "No comments": "No comments"
+  "No comments": "No comments",
+  "Write text of comment": "Write text of comment",
+  "Send": "Send"
 }

@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { ArticleDetails } from 'entities/Article';
 
 import { useParams } from 'react-router-dom';
@@ -15,6 +15,10 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     useInitialEffect,
 } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from 'features/AddCommentForm';
+import {
+    addCommentForArticle,
+} from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import {
     fetchCommentsByArticleId,
@@ -45,6 +49,10 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         dispatch(fetchCommentsByArticleId(id));
     });
 
+    const createCommentHandler = useCallback((text: string) => {
+        dispatch(addCommentForArticle(text));
+    }, [dispatch]);
+
     if (!id) {
         return (
             <div>
@@ -58,6 +66,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
             <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} title={t('Comments')} />
+                <AddCommentForm onSendComment={createCommentHandler} />
                 <CommentList
                     isLoading={isLoading}
                     comments={comments}
