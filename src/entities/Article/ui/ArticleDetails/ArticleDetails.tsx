@@ -4,7 +4,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
@@ -19,6 +19,9 @@ import {
     ArticleBlock,
     ArticleBlockType,
 } from 'entities/Article/model/types/article';
+import {
+    useInitialEffect,
+} from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     ArticleCodeBlockComponent,
 } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
@@ -59,11 +62,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     const article = useSelector(getArticleDetailsData);
     const error = useSelector(getArticleDetailsError);
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchArticleById(id));
-        }
-    }, [dispatch, id]);
+    useInitialEffect(() => {
+        dispatch(fetchArticleById(id));
+    });
 
     const renderBlock = useCallback((block:ArticleBlock) => {
         switch (block.type) {
