@@ -2,6 +2,7 @@
   "Age": "Age",
   "Articles was not found": "Articles was not found",
   "Avatar": "Avatar",
+  "Back": "Back",
   "Cancel": "Cancel",
   "Change": "Change",
   "City": "City",
@@ -13,6 +14,13 @@
   "None": "none",
   "Password": "Password",
   "Profile": "Profile",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Save": "Save",
   "Send": "Send",
   "Short lang": "Ру",
@@ -37,5 +45,12 @@
   "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
   "Страница не найдена": "Страница не найдена",
   "Укажите страну": "Укажите страну",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Язык": "Язык"
 }
