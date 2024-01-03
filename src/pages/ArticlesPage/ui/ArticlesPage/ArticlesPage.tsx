@@ -15,15 +15,15 @@ import { ArticleView } from 'entities/Article/model/types/article';
 import { Page } from 'shared/ui/Page/Page';
 import {
     fetchNextArticlesList,
-} from 'pages/ArticlesPage/model/services/fetchNextArticlesList/fetchNextArticlesList';
+} from '../../model/services/fetchNextArticlesList/fetchNextArticlesList';
+import {
+    initArticlesList,
+} from '../../model/services/initArticlesList/initArticlesList';
 import {
     articlesPageActions,
     articlesPageReducer,
     getArticles,
 } from '../../model/slices/artcilcePageSlice';
-import {
-    fetchArticlesList,
-} from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
     getError,
     getIsLoading,
@@ -51,10 +51,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initialState());
-        dispatch(fetchArticlesList({
-            page: 1,
-        }));
+        dispatch(initArticlesList());
     });
 
     const onChangeView = useCallback((view: ArticleView) => {
@@ -62,7 +59,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={reducerList}>
+        <DynamicModuleLoader reducers={reducerList} removeAfterUnmount={false}>
             <Page
                 className={classNames(cls.ArticlesPage, {}, [className])}
                 onScrollEnd={onLoadNextPart}
