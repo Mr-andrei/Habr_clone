@@ -9,6 +9,7 @@ import {
     createReducerManager,
 } from 'app/providers/StoreProvider/config/reducerManager';
 import { $api } from 'shared/api/api';
+import { scrollReviveReducer } from 'features/ScrollRevive';
 import { StateSchema } from './StateSchema';
 
 export function
@@ -19,6 +20,7 @@ createReduxStore(
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
         user: userReducer,
+        scrollRevive: scrollReviveReducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);

@@ -13,9 +13,11 @@ import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { ArticlePageSchema } from 'pages/ArticlesPage';
+import { ScrollReviveSchema } from 'features/ScrollRevive';
 
 export interface StateSchema {
     user: UserSchema;
+    scrollRevive: ScrollReviveSchema;
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
