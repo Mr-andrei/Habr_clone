@@ -1,5 +1,6 @@
 {
   "Age": "Age",
+  "Arrticles weren`t found": "Arrticles weren`t found",
   "Articles was not found": "Articles was not found",
   "Avatar": "Avatar",
   "Back": "Back",
@@ -22,21 +23,30 @@
     }
   },
   "Save": "Save",
+  "Search": "Search",
   "Send": "Send",
   "Short lang": "Ру",
+  "Sort by": "Sort by",
   "Write text of comment": "Write text of comment",
   "Yor last name": "Yor last name",
   "Yor name": "Yor name",
+  "by": "by",
+  "date of create": "date of create",
   "decrement": "decrement",
   "error": "error",
   "increment": "increment",
+  "name": "name",
   "throw error": "throw error",
   "username": "username",
+  "views": "views",
+  "Айти": "Айти",
   "Войти": "Войти",
+  "Все статьи": "Все статьи",
   "Выйти": "Выйти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "Короткий язык": "Ru",
+  "Наука": "Наука",
   "О сайте": "О сайте",
   "О сайте123123": "О сайте123123",
   "Обновить страницу": "Обновить страницу",
@@ -52,5 +62,8 @@
       }
     }
   },
-  "Язык": "Язык"
+  "Экономика": "Экономика",
+  "Язык": "Язык",
+  "возрастанию": "возрастанию",
+  "убыванию": "убыванию"
 }
