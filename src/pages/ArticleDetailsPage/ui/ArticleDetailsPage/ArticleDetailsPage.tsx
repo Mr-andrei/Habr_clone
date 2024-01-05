@@ -18,8 +18,11 @@ import {
 import { AddCommentForm } from 'features/AddCommentForm';
 import { Button } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
+import {
+    ArticlesDetailsPageHeader,
+} from 'pages/ArticleDetailsPage/ui/ArticlesDetailsPageHeader/ArticlesDetailsPageHeader';
 import {
     getArticleRecommendationsIsLoading,
 } from '../../model/selectors/recommendations';
@@ -61,7 +64,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const recommendations = useSelector(getArticleRecommendations.selectAll);
     const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
     const dispatch = useAppDispatch();
-    const navigate = useNavigate();
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
@@ -71,10 +73,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const createCommentHandler = useCallback((text: string) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
 
     if (!id) {
         return (
@@ -87,7 +85,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducersList} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button onClick={onBackToList}>{t('Back')}</Button>
+                <ArticlesDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} size={TextSize.L} title={t('Recommendations')} />
                 <ArticleList
