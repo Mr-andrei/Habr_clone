@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getProfileFirstName } from 'entities/Profile';
+import { getProfileFirstName } from '../getProfileFirstName/getProfileFirstName';
 
 describe('getProfileData.test', () => {
     test('should return firstName', () => {

@@ -1,4 +1,4 @@
-import { updateProfileData } from 'entities/Profile';
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 import {
 
     ProfileSchema,

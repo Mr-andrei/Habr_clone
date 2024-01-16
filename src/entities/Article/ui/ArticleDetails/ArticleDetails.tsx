@@ -16,12 +16,12 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import {
-    ArticleBlock,
-    ArticleBlockType,
-} from 'entities/Article/model/types/article';
-import {
     useInitialEffect,
 } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import {
+    ArticleBlock,
+    ArticleBlockType,
+} from '../../model/types/article';
 import {
     ArticleCodeBlockComponent,
 } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';

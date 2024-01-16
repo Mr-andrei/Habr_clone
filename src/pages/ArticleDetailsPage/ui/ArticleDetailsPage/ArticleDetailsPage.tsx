@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ArticleDetails } from 'entities/Article';
 
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
 import {
@@ -16,13 +16,11 @@ import {
     useInitialEffect,
 } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { AddCommentForm } from 'features/AddCommentForm';
-import { Button } from 'shared/ui/Button/Button';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 import {
     ArticlesDetailsPageHeader,
-} from 'pages/ArticleDetailsPage/ui/ArticlesDetailsPageHeader/ArticlesDetailsPageHeader';
+} from '../../ui/ArticlesDetailsPageHeader/ArticlesDetailsPageHeader';
 import {
     getArticleRecommendationsIsLoading,
 } from '../../model/selectors/recommendations';
@@ -43,9 +41,7 @@ import {
     getArticleComments,
 } from '../../model/slices/articleDetailsCommentsSlice';
 import cls from './ArticleDetailsPage.module.scss';
-import {
-    articlesDetailsPageReducer,
-} from '../../model/slices';
+import { articlesDetailsPageReducer } from '../../model/slices';
 
 interface ArticleDetailsPageProps {
     className?: string;

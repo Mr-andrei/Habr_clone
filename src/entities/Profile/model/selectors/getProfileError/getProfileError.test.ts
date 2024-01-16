@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getProfileError } from 'entities/Profile';
+import { getProfileError } from '../getProfileError/getProfileError';
 
 describe('getProfileError.test', () => {
     test('should return Error', () => {

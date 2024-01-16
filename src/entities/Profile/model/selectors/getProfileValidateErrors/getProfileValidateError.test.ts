@@ -1,6 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getProfileValidateErrors } from 'entities/Profile';
-import { ValidateProfileError } from 'entities/Profile/model/types/Profile';
+import { getProfileValidateErrors } from '../getProfileValidateErrors/getProfileValidateErrors';
+import { ValidateProfileError } from '../../types/Profile';
 
 describe('getProfileValidateError.test', () => {
     test('should return array of ValidateError', () => {
