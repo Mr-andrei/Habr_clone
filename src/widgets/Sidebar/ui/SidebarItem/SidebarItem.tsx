@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { HStack } from 'shared/ui/Stack';
 import { SidebarItemType } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 
@@ -17,10 +18,12 @@ export const SidebarItem = ({
         <AppLink
             theme={AppLinkTheme.SECONDARY}
             to={path}
-            className={classNames(cls.item, { [cls.collapsed]: collapsed }, [])}
+            className={classNames('', { [cls.collapsed]: collapsed }, [])}
         >
-            <Icon className={cls.icon} />
-            <span className={cls.link}>{t(text)}</span>
+            <HStack gap="8">
+                <Icon className={cls.icon} />
+                <span className={cls.link}>{t(text)}</span>
+            </HStack>
         </AppLink>
 
     );
