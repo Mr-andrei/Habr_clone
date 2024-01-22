@@ -601,6 +601,12 @@
       "userId": "2",
       "text": "fghfh",
       "id": "wyR2PR3"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "dsfsf",
+      "id": "fNeaxnJ"
     }
   ],
   "users": [
@@ -625,10 +631,10 @@
       "first": "jgh",
       "lastname": "asf",
       "age": 465,
-      "currency": "RUB",
-      "country": "Kazahstan",
+      "currency": "USD",
+      "country": "Armenia",
       "city": "Minsk",
-      "username": "admin213",
+      "username": "admin123",
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     },
     {

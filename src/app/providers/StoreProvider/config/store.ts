@@ -10,6 +10,7 @@ import {
 } from 'app/providers/StoreProvider/config/reducerManager';
 import { $api } from 'shared/api/api';
 import { scrollReviveReducer } from 'features/ScrollRevive';
+import { rtkApi } from 'shared/api/rtkApi';
 import { StateSchema } from './StateSchema';
 
 export function
@@ -21,6 +22,7 @@ createReduxStore(
         ...asyncReducers,
         user: userReducer,
         scrollRevive: scrollReviveReducer,
+        [rtkApi.reducerPath]: rtkApi.reducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);
@@ -35,7 +37,7 @@ createReduxStore(
                     api: $api,
                 },
             },
-        }),
+        }).concat(rtkApi.middleware),
     });
 
     // @ts-ignore

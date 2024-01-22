@@ -11,5 +11,6 @@
   "City": "City",
   "Avatar": "Avatar",
   "username": "username",
-  "Currency": "Currency"
+  "Currency": "Currency",
+  "Profile was not found": "Profile was not found"
 }
