@@ -3,7 +3,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import {
     useInitialEffect,
 } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
@@ -12,12 +11,10 @@ import { Country } from 'entities/Country';
 
 import { ProfileCard } from 'entities/Profile';
 import {
-    DynamicModuleLoader, ReducersList,
+    DynamicModuleLoader,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import {
-    profileActions, profileReducer,
-} from '../model/slice/profileSlice';
-import cls from './EditableProfileCard.module.scss';
+import { profileActions, profileReducer } from '../model/slice/profileSlice';
 import {
     getProfileForm,
 } from '../model/selectors/getProfileForm/getProfileForm';
@@ -94,7 +91,7 @@ export const EditableProfileCard = memo(({ className, id }: EditableProfileCardP
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.EditableProfileCard, {}, [className])}>
+            <div className={classNames('', {}, [className])}>
                 {validateErrors?.length && validateErrors.map((err) => (
                     <Text text={err} theme={TextTheme.ERROR} key={err} />
                 ))}
