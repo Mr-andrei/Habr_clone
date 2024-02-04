@@ -10,8 +10,16 @@ import { getUserAuthData } from 'entities/User';
 import { HStack } from 'shared/ui/Stack';
 import {
     getProfileData,
-    getProfileReadOnly, profileActions, updateProfileData,
-} from 'features/EditableProfileCard';
+} from '../../model/selectors/getProfileData/getProfileData';
+import {
+    getProfileReadOnly,
+} from '../../model/selectors/getProfileReadOnly/getProfileReadOnly';
+import {
+    profileActions,
+} from '../../model/slice/profileSlice';
+import {
+    updateProfileData,
+} from '../../model/services/updateProfileData/updateProfileData';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
@@ -47,6 +55,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                             <Button
                                 theme={ButtonTheme.OUTLINE}
                                 onClick={onEdit}
+                                data-testid="ProfileHeader.Change"
                             >
                                 {t('Change')}
                             </Button>
@@ -56,12 +65,14 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                                 <Button
                                     theme={ButtonTheme.OUTLINE_RED}
                                     onClick={onCancelEdit}
+                                    data-testid="ProfileHeader.Cancel"
                                 >
                                     {t('Cancel')}
                                 </Button>
                                 <Button
                                     theme={ButtonTheme.OUTLINE}
                                     onClick={onSave}
+                                    data-testid="ProfileHeader.Save"
                                 >
                                     {t('Save')}
                                 </Button>

@@ -5,7 +5,6 @@ import { Page } from 'widgets/Page/Page';
 import { EditableProfileCard } from 'features/EditableProfileCard';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ProfilePageHeader } from './ProfielPageHeader/ProfilePageHeader';
 
 interface ProfilePageProps {
     className?: string;
@@ -23,7 +22,6 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     return (
         <Page className={classNames('', {}, [className])}>
-            <ProfilePageHeader />
             <EditableProfileCard id={id} />
         </Page>
 

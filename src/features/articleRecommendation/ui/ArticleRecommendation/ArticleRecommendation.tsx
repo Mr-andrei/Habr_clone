@@ -7,6 +7,7 @@ import { VStack } from 'shared/ui/Stack';
 import {
     useArticlesRecommendations,
 } from '../../api/articlesRecommendationsApi';
+import cls from './ArticleRrecommendation.module.scss';
 
 interface ArticleRecommendationProps {
     className?: string;
@@ -20,17 +21,18 @@ export const ArticleRecommendation = memo((props: ArticleRecommendationProps) =>
         data: recommendations,
     } = useArticlesRecommendations(4);
 
-    if (isLoading) {
+    if (isLoading || !recommendations) {
         return null;
     }
 
     return (
-        <VStack gap="8" className={classNames('', {}, [className])}>
+        <VStack gap="8" className={classNames(cls.container, {}, [className])}>
             <Text size={TextSize.L} title={t('Recommendations')} />
             <ArticleList
                 articles={recommendations}
                 isLoading={isLoading}
                 target="_blank"
+                virtualized={false}
             />
         </VStack>
     );

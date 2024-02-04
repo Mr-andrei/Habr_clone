@@ -14,25 +14,28 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { profileActions, profileReducer } from '../model/slice/profileSlice';
+import {
+    ProfilePageHeader,
+} from '../../ui/ProfielPageHeader/ProfilePageHeader';
+import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import {
     getProfileForm,
-} from '../model/selectors/getProfileForm/getProfileForm';
+} from '../../model/selectors/getProfileForm/getProfileForm';
 import {
     getProfileIsLoading,
-} from '../model/selectors/getProfileIsLoading/getProfileIsLoading';
+} from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import {
     getProfileError,
-} from '../model/selectors/getProfileError/getProfileError';
+} from '../../model/selectors/getProfileError/getProfileError';
 import {
     getProfileReadOnly,
-} from '../model/selectors/getProfileReadOnly/getProfileReadOnly';
+} from '../../model/selectors/getProfileReadOnly/getProfileReadOnly';
 import {
     getProfileValidateErrors,
-} from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+} from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import {
     fetchProfileData,
-} from '../model/services/fetchProfileData/fetchProfileData';
+} from '../../model/services/fetchProfileData/fetchProfileData';
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -90,10 +93,16 @@ export const EditableProfileCard = memo(({ className, id }: EditableProfileCardP
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers}>
             <div className={classNames('', {}, [className])}>
+                <ProfilePageHeader />
                 {validateErrors?.length && validateErrors.map((err) => (
-                    <Text text={err} theme={TextTheme.ERROR} key={err} />
+                    <Text
+                        text={err}
+                        theme={TextTheme.ERROR}
+                        key={err}
+                        data-testid="EditableProfileCard.Error"
+                    />
                 ))}
                 <ProfileCard
                     data={formData}
