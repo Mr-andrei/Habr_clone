@@ -18,9 +18,10 @@ import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import {
     useInitialEffect,
 } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { ArticleBlockType } from '../../model/consts';
 import {
     ArticleBlock,
-    ArticleBlockType,
+
 } from '../../model/types/article';
 import {
     ArticleCodeBlockComponent,

@@ -3,7 +3,7 @@ import { Currency } from 'entities/Currency';
 
 import {
     ValidateProfileError,
-} from '../../types/ProfileSchema';
+} from '../../consts';
 import { validateProfileData } from './validateProfileData';
 
 const data = {

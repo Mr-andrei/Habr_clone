@@ -4,7 +4,7 @@ import { Currency } from 'entities/Currency';
 
 import {
     ValidateProfileError,
-} from '../../types/ProfileSchema';
+} from '../../consts';
 import { updateProfileData } from './updateProfileData';
 
 const data = {

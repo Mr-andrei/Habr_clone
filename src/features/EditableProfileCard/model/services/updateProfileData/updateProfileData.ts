@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import {
     ValidateProfileError,
-} from '../../types/ProfileSchema';
+} from '../../consts';
 import {
     validateProfileData,
 } from '../validateProfileData/validateProfileData';
