@@ -46,7 +46,17 @@ module.exports = {
         'i18next/no-literal-string': [
             'error', {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'fallback', 'alt', 'target', 'direction', 'role', 'as'],
+                ignoreAttribute: [
+                    'data-testid',
+                    'to',
+                    'fallback',
+                    'alt',
+                    'target',
+                    'direction',
+                    'role',
+                    'as',
+                    'border',
+                ],
             }],
         'max-len': ['error', {
             code: 120,
