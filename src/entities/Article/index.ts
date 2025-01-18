@@ -16,4 +16,4 @@ export {
 export type { Article } from './model/types/article';
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 
-export { ArticleView, ArticleType, ArticleSortField } from 'entities/Article/model/consts';
+export { ArticleView, ArticleType, ArticleSortField } from '@/entities/Article/model/consts';
