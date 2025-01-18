@@ -1,13 +1,13 @@
-import { Profile } from 'entities/Profile';
 import { fireEvent, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { Profile } from '@/entities/Profile';
 
 import {
     componentRender,
-} from 'shared/lib/tests/componentRender/componentRender';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
+} from '@/shared/lib/tests/componentRender/componentRender';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
 
-import userEvent from '@testing-library/user-event';
 import {
     profileReducer,
 } from '../../model/slice/profileSlice';
