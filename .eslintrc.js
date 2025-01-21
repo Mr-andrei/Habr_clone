@@ -56,6 +56,8 @@ module.exports = {
                     'role',
                     'as',
                     'border',
+                    'align',
+                    'justify',
                 ],
             }],
         'max-len': ['error', {
