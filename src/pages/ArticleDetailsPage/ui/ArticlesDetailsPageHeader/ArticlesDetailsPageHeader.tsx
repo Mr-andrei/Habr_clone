@@ -9,7 +9,7 @@ import {
     getCanEditArticle,
 } from '../../model/selectors/article';
 import cls from './ArticlesDetailsPageHeader.module.scss';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
 
 interface ArticlesDetailsPageHeaderProps {
     className?: string;
@@ -22,11 +22,11 @@ export const ArticlesDetailsPageHeader = memo(({ className }: ArticlesDetailsPag
     const article = useSelector(getArticleDetailsData);
 
     const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
+        navigate(getRouteArticles());
     }, [navigate]);
 
     const onEditArticle = useCallback(() => {
-        navigate(`${RoutePath.article_edit}/${article?.id}/edit`);
+        navigate(getRouteArticleEdit(article!.id));
     }, [article, navigate]);
 
     return (
